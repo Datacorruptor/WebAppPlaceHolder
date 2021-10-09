@@ -12,3 +12,6 @@ else:
     except Exception as e:
         st.warning(e)
 
+'''
+Работу выполнил Кривко Иван БИСО-03-19
+'''
