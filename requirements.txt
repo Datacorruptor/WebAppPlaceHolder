@@ -2,6 +2,3 @@ streamlit
 argparse
 textdistance
 numpy
-German
-AncientRus
-Interlacer
