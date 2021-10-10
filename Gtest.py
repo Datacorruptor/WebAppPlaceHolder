@@ -1,4 +1,5 @@
 import German as w2n
+import AncientRus as AR
 from unittest import TestCase
 
 
@@ -102,7 +103,7 @@ class TestConverter(TestCase):
         self.assertTrue(w2n.convert('sechsundneunzig') == 96)
         self.assertTrue(w2n.convert('siebenundneunzig') == 97)
         self.assertTrue(w2n.convert('achtundneunzig') == 98)
-
-print(w2n.convert('zweihundertachtundfünfzi'))
+print(AR.convert(999))
+print(w2n.convert('zweihundertachtundfünfzig'))
 T = TestConverter()
 #T.test_hardcoded_values_upto_100()

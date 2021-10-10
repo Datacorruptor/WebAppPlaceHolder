@@ -1,4 +1,3 @@
-from argparse import ArgumentError
 import textdistance
 import numpy as np
 name = 'MyZahlwort'
