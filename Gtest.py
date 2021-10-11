@@ -103,7 +103,7 @@ class TestConverter(TestCase):
         self.assertTrue(w2n.convert('sechsundneunzig') == 96)
         self.assertTrue(w2n.convert('siebenundneunzig') == 97)
         self.assertTrue(w2n.convert('achtundneunzig') == 98)
-print(AR.convert(999))
-print(w2n.convert('zweihundertachtundfünfzig'))
+
+print(w2n.convert('tausendzweihundertachtundfünfzig'))
 T = TestConverter()
 #T.test_hardcoded_values_upto_100()
