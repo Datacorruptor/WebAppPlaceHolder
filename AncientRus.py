@@ -16,7 +16,12 @@ class RusConverter:
         ans = ""
         x = self.number
         for digit in self.ALPHABET:
-            ans+=digit*(x//self.ALPHABET[digit])
+
+            num = (x//self.ALPHABET[digit])
+            if num>19:
+                ans+="ффффффффффффффф...ф["+str(num)+" символов]"
+            else:
+                ans+=digit*(x//self.ALPHABET[digit])
             x=x%self.ALPHABET[digit]
         return ans
 
