@@ -1,10 +1,11 @@
 import streamlit as st
 import German
+import GermanKoryagin
 import AncientRus
 import Interlacer
 
 '''
-# Задание 1. Немецкие цифры.
+# Задание 1. Немецкие цифры V2.
 **Описание задачи**: по введенному числу на *немецком* языке записать его с помощью *арабских* цифр и затем представить его *старорусскими* цифрами (а-1 в-2 и-8 л-30 р-100 ф-500)
 '''
 
@@ -14,8 +15,7 @@ if not name:
     st.warning("необходимо ввести число")
 else:
     try:
-        st.warning("Немецкий: " + name.replace(" ",""))
-        st.warning("Арабский: " + str(German.convert(name)))
+        st.warning("Арабский: " + str(GermanKoryagin.convert(name)))
         st.warning("Древнерусский: "+ AncientRus.convert(German.convert(name)))
     except Exception as e:
         st.warning(e)
@@ -41,3 +41,23 @@ else:
 '''
 Работу выполнил Кривко Иван БИСО-03-19
 '''
+
+
+
+
+'''
+# Задание 1. Немецкие цифры.
+**Описание задачи**: по введенному числу на *немецком* языке записать его с помощью *арабских* цифр и затем представить его *старорусскими* цифрами (а-1 в-2 и-8 л-30 р-100 ф-500)
+'''
+
+name = st.text_input("Введите число немецкими словами")
+
+if not name:
+    st.warning("необходимо ввести число")
+else:
+    try:
+        st.warning("Немецкий: " + name.replace(" ",""))
+        st.warning("Арабский: " + str(German.convert(name)))
+        st.warning("Древнерусский: "+ AncientRus.convert(German.convert(name)))
+    except Exception as e:
+        st.warning(e)
